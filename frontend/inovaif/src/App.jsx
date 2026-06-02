@@ -28,8 +28,10 @@ import {
 
 import { useRef, useEffect, useState } from "react";
 import videopage from "./assets/videopage.mp4";
+import { landingPageConteudo } from "./landingPageConteudo";
 
 function App() {
+  const { linkWhatsapp } = landingPageConteudo.config;
   const dataFinal = new Date("2026-06-01T23:59:59");
 
   const [tempo, setTempo] = useState({
@@ -75,6 +77,21 @@ function App() {
     { icon: Zap, title: "Lorem Ipsum" },
   ];
 
+  const desenvolvedores = [
+    {
+      nome: "Andrey Muniz Benites",
+      curso: "TSI",
+      foto: "./user2.jpg",
+      contato: "andrey.benites@estudante.ifms.edu.br",
+    },
+    {
+      nome: "Matheus Marques Larréa",
+      curso: "TSI",
+      foto: "./user1.jpeg",
+      contato: "matheus.larrea@estudante.ifms.edu.br",
+    },
+  ];
+
   const [videoFinalizado, setVideoFinalizado] = useState(false);
 
   const [tocando, setTocando] = useState(false);
@@ -112,7 +129,10 @@ function App() {
           <a href="#oferta">Oferta</a>
         </nav>
 
-        <button className="buy-btn">
+        <button
+          className="buy-btn"
+          onClick={() => window.open(linkWhatsapp, "_blank")}
+        >
           <ShoppingCart size={18} />
           Comprar Agora
         </button>
@@ -169,9 +189,18 @@ function App() {
             <div className="progress-fill" style={{ width: `${progresso}%` }} />
           </div>
         </div>
-
-        <button className="cta-button">Quero Saber Mais</button>
       </section>
+
+      {videoFinalizado && (
+        <div className="cta-container">
+          <button
+            className="cta-button"
+            onClick={() => window.open(linkWhatsapp, "_blank")}
+          >
+            Quero Saber Mais
+          </button>
+        </div>
+      )}
 
       <div
         className={videoFinalizado ? "conteudo-liberado" : "conteudo-bloqueado"}
@@ -285,7 +314,38 @@ function App() {
             <div className="preco">R$ 000,00</div>
           </div>
 
-          <button className="buy-big">Comprar Agora</button>
+          <button
+            className="buy-big"
+            onClick={() => window.open(linkWhatsapp, "_blank")}
+          >
+            Comprar Agora
+          </button>
+        </section>
+
+        <section className="secao-devs-compacta">
+          <h4 className="titulo-devs-compacta">Criado por:</h4>
+
+          <div className="container-devs-compacta">
+            {desenvolvedores.map((membro, index) => (
+              <div key={index} className="item-dev-compacto">
+                <img
+                  src={membro.foto}
+                  alt={membro.nome}
+                  className="foto-dev-compacta"
+                />
+
+                <div className="textos-dev-compacto">
+                  <h5>{membro.nome}</h5>
+
+                  <span className="curso-dev-compacto">{membro.curso}</span>
+
+                  <p className="linha-contato-dev">
+                    <strong>Contato:</strong> {membro.contato}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <footer className="footer">
@@ -366,7 +426,12 @@ function App() {
         </footer>
       </div>
 
-      <a href="#" className="whatsapp">
+      <a
+        href={linkWhatsapp}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="whatsapp"
+      >
         <FaWhatsapp size={35} />
       </a>
     </>
