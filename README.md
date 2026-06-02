@@ -1,98 +1,28 @@
-# InovaIF - Landing Page de Venda de Cursos
+# Landing Page - Projeto InovaIF
 
-## Integrantes
+Trabalho prático desenvolvido em ambiente acadêmico para o projeto **InovaIF**. Esta é uma Landing Page responsiva de alta conversão estruturada em **React**, utilizando componentização dinâmica e uma arquitetura limpa de dados.
 
-* Nome do Aluno 1
-* Nome do Aluno 2
+## Desenvolvedores
 
-## Descrição do Projeto
+* **Andrey Muniz Benites** - Curso: TSI (andrey.benites@estudante.ifms.edu.br)
+* **Matheus Marques Larréa** - Curso: TSI (matheus.larrea@estudante.ifms.edu.br)
 
-Este projeto foi desenvolvido para a disciplina de Git e GitHub como parte do evento InovaIF.
-
-O objetivo é criar uma Landing Page para divulgação e venda de cursos, contendo informações sobre o produto, certificações, avaliações de clientes, FAQ e área de compra.
+---
 
 ## Tecnologias Utilizadas
 
-### Frontend
+* **React.js** (Biblioteca principal para construção da interface)
+* **Vite** (Ferramenta de build rápida e ambiente de desenvolvimento)
+* **React Router Dom** (Gerenciamento de rotas globais)
+* **CSS3 Vanilla** (Estilização baseada em variáveis customizadas e design fluido)
 
-* HTML5
-* CSS3
-* JavaScript
+---
 
-### Backend
+## Características do Projeto e Design
 
-* Node.js
-* Express
+* **Componentização Inteligente:** Toda a estrutura de texto, caminhos de imagens locais, links das redes sociais institucionais e canais de contato ficam centralizados no arquivo `src/conteudo.js`, tornando a manutenção do site simples e centralizada.
+* **Cronômetro de Escassez Ativo:** Sistema nativo em React que gerencia dinamicamente um temporizador regressivo na barra superior para gatilhos de urgência.
+* **VSL com Início Programado:** Player de vídeo otimizado utilizando a API do YouTube Embed
+* **Mobile-First e Responsivo:** Grid de recursos e cards ajustáveis para telas menores e dispositivos móveis através de Media Queries limpas.
 
-### Controle de Versão
-
-* Git
-* GitHub
-
-## Funcionalidades
-
-* Header com nome da empresa
-* Cronômetro regressivo
-* Vídeo de apresentação
-* Seção de certificações
-* Passos para atingir o objetivo
-* Cards de características do produto
-* Área de utilidade
-* Feedbacks e avaliações
-* Apresentação do responsável
-* FAQ e garantia
-* Área de venda
-* Rodapé
-* Botão flutuante do WhatsApp
-
-## Estrutura do Projeto
-
-inovaif-site/
-
-frontend/
-
-backend/
-
-README.md
-
-.gitignore
-
-## Como Executar
-
-### Clonar o repositório
-
-git clone LINK_DO_REPOSITORIO
-
-### Entrar na pasta backend
-
-cd backend
-
-### Instalar dependências
-
-npm install
-
-### Executar o servidor
-
-node server.js
-
-Servidor disponível em:
-
-http://localhost:3000
-
-## Branches Utilizadas
-
-* main
-* feature/header-footer
-* feature/conteudo
-
-## Conflitos Resolvidos
-
-Durante o desenvolvimento foi realizado um conflito proposital no arquivo index.html para fins de aprendizagem. O conflito foi resolvido utilizando o processo padrão de merge do Git.
-
-## Histórico de Desenvolvimento
-
-O projeto foi desenvolvido utilizando commits frequentes, branches separadas para cada funcionalidade e Pull Requests para integração do código.
-
-## Licença
-
-Projeto acadêmico desenvolvido para fins educacionais.
+---
